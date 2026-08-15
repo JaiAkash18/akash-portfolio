@@ -1,0 +1,622 @@
+/* =====================================================
+   LIVE PROJECTS
+===================================================== */
+
+.live-projects-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  padding: 130px 0 110px;
+
+  background: #050505;
+  color: #f5f5f5;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.live-projects-grid {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 84px 84px;
+}
+
+
+/* =====================================================
+   RED GLOW
+===================================================== */
+
+.live-projects-glow {
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  right: -180px;
+  top: 220px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 30, 30, 0.22),
+      rgba(120, 0, 0, 0.08) 45%,
+      transparent 72%
+    );
+
+  filter: blur(35px);
+
+  pointer-events: none;
+
+  animation:
+    liveGlow 8s ease-in-out infinite
+    alternate;
+}
+
+@keyframes liveGlow {
+  from {
+    transform: scale(0.92);
+    opacity: 0.6;
+  }
+
+  to {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.live-projects-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1080px, 86vw);
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.live-projects-header {
+  margin-bottom: 60px;
+}
+
+.live-projects-eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 24px;
+
+  color: #ff3030;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.25em;
+}
+
+.live-projects-eyebrow i {
+  display: block;
+
+  width: 38px;
+  height: 1px;
+
+  background: #ff3030;
+}
+
+.live-projects-header h2 {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(
+    4rem,
+    7vw,
+    7rem
+  );
+
+  font-weight: 800;
+
+  line-height: 0.84;
+
+  letter-spacing: -0.075em;
+}
+
+.live-projects-header h2 span {
+  color: #ff3030;
+}
+
+
+/* =====================================================
+   PROJECT INFO
+===================================================== */
+
+.live-project-info {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 70px;
+
+  align-items: end;
+
+  margin-bottom: 55px;
+}
+
+.live-project-number {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #ff3030;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.2em;
+}
+
+.live-project-info h3 {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(
+    2.5rem,
+    4vw,
+    4.5rem
+  );
+
+  line-height: 0.9;
+
+  letter-spacing: -0.06em;
+}
+
+.live-project-description p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #858585;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   TECHNOLOGIES
+===================================================== */
+
+.live-project-tech {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 24px;
+}
+
+.live-project-tech span {
+  padding: 8px 11px;
+
+  border:
+    1px solid rgba(
+      255,
+      255,
+      255,
+      0.12
+    );
+
+  color: #aaa;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  background: rgba(255,255,255,0.02);
+}
+
+
+/* =====================================================
+   SHOWCASE
+===================================================== */
+
+.live-project-showcase {
+  position: relative;
+
+  min-height: 610px;
+
+  margin-top: 30px;
+}
+
+
+/* =====================================================
+   IMAGE COMMON
+===================================================== */
+
+.live-image-main,
+.live-image-booking {
+  position: absolute;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(
+      255,
+      255,
+      255,
+      0.15
+    );
+
+  background: #080808;
+
+  box-shadow:
+    0 35px 90px
+    rgba(0, 0, 0, 0.55);
+
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.live-image-main:hover,
+.live-image-booking:hover {
+  border-color:
+    rgba(255, 48, 48, 0.55);
+
+  box-shadow:
+    0 45px 110px
+    rgba(0, 0, 0, 0.7),
+    0 0 60px
+    rgba(255, 30, 30, 0.08);
+}
+
+
+/* =====================================================
+   HOME PAGE IMAGE
+===================================================== */
+
+.live-image-main {
+  left: 0;
+  top: 0;
+
+  width: 72%;
+
+  z-index: 2;
+}
+
+.live-image-main img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  transition:
+    transform 0.7s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+.live-image-main:hover img {
+  transform: scale(1.035);
+}
+
+
+/* =====================================================
+   BOOKING IMAGE
+===================================================== */
+
+.live-image-booking {
+  right: 0;
+  top: 150px;
+
+  width: 42%;
+
+  z-index: 4;
+}
+
+.live-image-booking img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  transition:
+    transform 0.7s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+.live-image-booking:hover img {
+  transform: scale(1.035);
+}
+
+
+/* =====================================================
+   IMAGE LABEL
+===================================================== */
+
+.live-image-label {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 9px 13px;
+
+  border:
+    1px solid rgba(
+      255,
+      255,
+      255,
+      0.18
+    );
+
+  border-radius: 999px;
+
+  background:
+    rgba(5, 5, 5, 0.85);
+
+  backdrop-filter: blur(12px);
+
+  color: #ddd;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.live-image-label span {
+  color: #ff3030;
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.live-project-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 30px;
+}
+
+.live-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #777;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.2em;
+}
+
+.live-status span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #ff3030;
+
+  box-shadow:
+    0 0 12px #ff3030;
+
+  animation:
+    livePulse 1.8s
+    ease-in-out infinite;
+}
+
+@keyframes livePulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =====================================================
+   LIVE BUTTON
+===================================================== */
+
+.live-project-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  min-width: 205px;
+  height: 55px;
+
+  padding: 0 24px;
+
+  border-radius: 999px;
+
+  background: #ff3030;
+
+  color: #fff;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.live-project-button span {
+  font-size: 16px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.live-project-button:hover {
+  transform: translateY(-3px);
+
+  background: #ff3b3b;
+
+  box-shadow:
+    0 15px 40px
+    rgba(255, 48, 48, 0.25);
+}
+
+.live-project-button:hover span {
+  transform:
+    translate(4px, -4px);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .live-projects-section {
+    padding: 100px 0 80px;
+  }
+
+  .live-project-info {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .live-project-showcase {
+    min-height: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .live-image-main,
+  .live-image-booking {
+    position: relative;
+
+    inset: auto;
+
+    width: 100%;
+  }
+
+  .live-image-booking {
+    margin-left: 8%;
+    width: 92%;
+  }
+
+  .live-project-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .live-projects-container {
+    width: 90vw;
+  }
+
+  .live-projects-header h2 {
+    font-size: 3.7rem;
+  }
+
+  .live-project-info h3 {
+    font-size: 2.8rem;
+  }
+
+  .live-project-description p {
+    font-size: 12px;
+  }
+
+  .live-project-button {
+    width: 100%;
+  }
+}
